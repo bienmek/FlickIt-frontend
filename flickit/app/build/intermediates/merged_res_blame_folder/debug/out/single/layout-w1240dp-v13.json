@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.ugoo.flickit.app-mergeDebugResources-37:/layout-w1240dp-v13/activity_login.xml",
+        "source": "com.ugoo.flickit.app-main-40:/layout-w1240dp/activity_login.xml"
+    }
+]
