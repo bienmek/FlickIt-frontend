@@ -16,10 +16,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button cam = (Button) findViewById(R.id.buttoncam);
+        Button login = (Button) findViewById(R.id.buttonlogin);
 
         cam.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.CamActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.LoginActivity.class);
                 startActivity(intent);
             }
         });
