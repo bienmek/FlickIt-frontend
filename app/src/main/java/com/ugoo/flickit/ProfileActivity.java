@@ -8,21 +8,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class HomeActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_profile);
 
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView profile = (ImageView) findViewById(R.id.profile);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView returnHome = (ImageView) findViewById(R.id.returnHome);
 
-        profile.setOnClickListener(new View.OnClickListener() {
+        returnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.ProfileActivity.class);
+                Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.HomeActivity.class);
                 startActivity(intent);
             }
         });
+
     }
 }
