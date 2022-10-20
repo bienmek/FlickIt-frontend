@@ -67,9 +67,6 @@ public class CamActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 
     private void openCamera() {
@@ -83,19 +80,17 @@ public class CamActivity extends AppCompatActivity {
         startActivityForResult(camintent, CAPTURE_CODE);
     }
 
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        switch(requestCode){
-            case PERMISSION_CODE:
-                if (grantResults.length>0 && grantResults[0] ==
-                PackageManager.PERMISSION_GRANTED){
-                    openCamera();
-                }else {
-                    Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
-                }
+        if (requestCode == PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] ==
+                    PackageManager.PERMISSION_GRANTED) {
+                openCamera();
+            } else {
+                Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
