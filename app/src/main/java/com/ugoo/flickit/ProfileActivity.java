@@ -22,6 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.HomeActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.right_to_left, R.anim.left_to_right);
             }
         });
 

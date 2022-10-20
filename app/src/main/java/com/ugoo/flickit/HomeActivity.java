@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), com.ugoo.flickit.ProfileActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
             }
         });
     }
